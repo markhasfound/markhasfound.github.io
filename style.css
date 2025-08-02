@@ -1,8 +1,9 @@
+/* Font and layout */
 body {
   margin: 0;
   padding: 0;
-  background: #eae7e1;
-  color: #1a1a1a;
+  background: #111;
+  color: #ddd;
   font-family: 'EB Garamond', serif;
   display: flex;
   justify-content: center;
@@ -12,75 +13,72 @@ body {
   position: relative;
 }
 
-.background-blur {
+/* Soft moving blur background */
+.background {
   position: absolute;
   top: -50%;
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at center, #dcd6cf, #eae7e1, #f3f2f0);
+  background: radial-gradient(circle at center, #222 0%, #111 80%);
   filter: blur(80px);
+  animation: slowMove 60s ease-in-out infinite;
   z-index: 0;
-  animation: drift 60s linear infinite;
 }
 
-@keyframes drift {
+@keyframes slowMove {
   0% { transform: translate(0, 0); }
   50% { transform: translate(30px, -30px); }
   100% { transform: translate(0, 0); }
 }
 
+/* Text container */
 .container {
   text-align: center;
+  z-index: 1;
   padding: 2rem;
-  z-index: 2;
-  position: relative;
 }
 
+/* Title */
 h1 {
-  font-size: 4rem;
-  font-weight: normal;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
-  letter-spacing: 2px;
-  transition: color 0.3s ease;
+  letter-spacing: 1px;
+  color: #f2f2f2;
 }
 
-h1:hover {
-  color: #555;
-}
-
+/* Lines and text */
 p {
-  font-size: 1.25rem;
-  line-height: 2;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
+  font-size: 1.2rem;
+  opacity: 0.85;
+  margin: 0.5rem 0;
 }
 
 .line {
-  width: 50px;
+  width: 60px;
   height: 1px;
-  background-color: #aaa;
+  background: #888;
   margin: 2rem auto;
-  opacity: 0.5;
-}
-
-.quiet {
-  font-size: 0.8rem;
   opacity: 0.4;
 }
 
-/* Animations */
+.quiet {
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+/* Fade animations */
 .fade {
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 1.5s forwards;
+  animation: fadeIn 1.5s forwards;
 }
 
-.delay-1 { animation-delay: 0.5s; }
-.delay-2 { animation-delay: 1s; }
-.delay-3 { animation-delay: 1.5s; }
+.delay-1 { animation-delay: 0.4s; }
+.delay-2 { animation-delay: 0.8s; }
+.delay-3 { animation-delay: 1.2s; }
 
-@keyframes fadeInUp {
+@keyframes fadeIn {
   to {
     opacity: 1;
     transform: translateY(0);
