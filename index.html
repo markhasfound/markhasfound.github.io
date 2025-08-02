@@ -3,34 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Welcome | ial </title>
+  <title>yearn</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="background-blur"></div>
-  <div class="container">
-    <h1 class="fade">yearn</h1>
-    <p class="fade delay-1">for something lost<br>or never held</p>
-    <div class="line fade delay-2"></div>
-    <p class="quiet fade delay-3">scroll slowly</p>
-  </div>
-  <script>
-    // Cursor glow
-    const glow = document.createElement('div');
-    glow.style.position = 'fixed';
-    glow.style.width = '20px';
-    glow.style.height = '20px';
-    glow.style.borderRadius = '50%';
-    glow.style.background = 'rgba(100,100,255,0.15)';
-    glow.style.pointerEvents = 'none';
-    glow.style.transition = 'top 0.2s, left 0.2s';
-    document.body.appendChild(glow);
+  <div class="background"></div>
 
-    document.addEventListener('mousemove', (e) => {
-      glow.style.left = e.clientX - 10 + 'px';
-      glow.style.top = e.clientY - 10 + 'px';
-    });
-  </script>
+  <nav>
+    <a href="#home">home</a>
+    <a href="#about">about</a>
+    <a href="#purpose">what this is</a>
+  </nav>
+
+  <section id="home" class="section">
+    <h1>yearn</h1>
+    <p>for what was, or never was</p>
+  </section>
+
+  <section id="about" class="section">
+    <h2>about me</h2>
+    <p>I’m mark. I build things that feel.</p>
+    <p>I overthink, overwrite, and stay up late feeling stuff I can’t explain.</p>
+  </section>
+
+  <section id="purpose" class="section">
+    <h2>what this is</h2>
+    <p>a webpage. a graveyard. a love letter. a soft digital space to ache in.</p>
+    <p>you’re welcome here.</p>
+  </section>
 </body>
 </html>
