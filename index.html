@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Welcome | markhasfound</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #0d1117;
-      color: #c9d1d9;
-      text-align: center;
-      padding: 5em 1em;
-    }
-    a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Welcome | ial </title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hey, I'm ial!</h1>
-  <p>This is my personal site hosted on <a href="https://github.com/markhasfound">GitHub</a>.</p>
+  <div class="background-blur"></div>
+  <div class="container">
+    <h1 class="fade">yearn</h1>
+    <p class="fade delay-1">for something lost<br>or never held</p>
+    <div class="line fade delay-2"></div>
+    <p class="quiet fade delay-3">scroll slowly</p>
+  </div>
+  <script>
+    // Cursor glow
+    const glow = document.createElement('div');
+    glow.style.position = 'fixed';
+    glow.style.width = '20px';
+    glow.style.height = '20px';
+    glow.style.borderRadius = '50%';
+    glow.style.background = 'rgba(100,100,255,0.15)';
+    glow.style.pointerEvents = 'none';
+    glow.style.transition = 'top 0.2s, left 0.2s';
+    document.body.appendChild(glow);
+
+    document.addEventListener('mousemove', (e) => {
+      glow.style.left = e.clientX - 10 + 'px';
+      glow.style.top = e.clientY - 10 + 'px';
+    });
+  </script>
 </body>
 </html>
